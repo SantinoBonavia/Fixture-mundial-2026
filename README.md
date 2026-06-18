@@ -1,16 +1,37 @@
-# React + Vite
+# 🏆 Fixture Mundial 2026
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web desarrollada con React que permite seguir el Mundial 2026 de manera interactiva.
 
-Currently, two official plugins are available:
+Los usuarios pueden cargar los resultados de cada partido y el sistema actualiza automáticamente las tablas de posiciones, los clasificados y las fases eliminatorias.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Funcionalidades
 
-## React Compiler
+* ⚽ Carga de resultados de partidos
+* 📊 Tablas de posiciones automáticas
+* 🏅 Clasificados automáticos por grupo
+* 🏟️ Generación de cruces eliminatorios
+* 💾 Persistencia de datos con LocalStorage
+* 🎨 Interfaz inspirada en la identidad visual del Mundial 2026
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Tecnologías utilizadas
 
-## Expanding the ESLint configuration
+* React
+* JavaScript
+* Vite
+* CSS
+* LocalStorage
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📌 Estado del proyecto
+
+En desarrollo.
+
+Próximas funcionalidades:
+
+* Completar fixture de grupos
+* Implementar cuadro completo de eliminación
+* Octavos, cuartos, semifinales y final automáticos
+* Mejoras visuales y responsive design
+
+## 👨‍💻 Autor
+
+Santino Bonavia
