@@ -82,17 +82,43 @@ h2 {
 }
 
 .match-card {
-  background: rgba(255,255,255,0.04);
+  background: linear-gradient(
+    135deg,
+    rgba(0, 229, 255, 0.08),
+    rgba(255, 0, 170, 0.05)
+  );
 
-  border: 1px solid rgba(0,229,255,0.2);
+  border: 1px solid rgba(0, 229, 255, 0.25);
 
-  border-radius: 16px;
+  border-radius: 18px;
 
   padding: 20px;
 
   margin-top: 20px;
 
   backdrop-filter: blur(10px);
+
+  transition: all 0.25s ease;
+}
+
+.match-card:hover {
+  transform: translateY(-2px);
+
+  border-color: #00e5ff;
+
+  box-shadow:
+    0 0 12px rgba(0, 229, 255, 0.2),
+    0 0 30px rgba(255, 0, 170, 0.1);
+}
+
+.match-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 15px;
 }
 
 .match-teams {
@@ -107,6 +133,23 @@ h2 {
   font-weight: bold;
 }
 
+.team {
+  flex: 1;
+}
+
+.team:first-child {
+  text-align: right;
+}
+
+.team:last-child {
+  text-align: left;
+}
+
+.team-name {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
 .score-inputs {
   display: flex;
 
@@ -118,27 +161,55 @@ h2 {
 .score-inputs input {
   width: 55px;
 
-  height: 40px;
+  height: 42px;
 
-  background: #0f172a;
+  background: #0b1220;
 
-  border: 1px solid #00e5ff;
+  border: 2px solid #00e5ff;
+
+  border-radius: 10px;
 
   color: white;
 
-  border-radius: 8px;
+  font-size: 1.1rem;
+
+  font-weight: bold;
 
   text-align: center;
 
-  font-size: 1rem;
+  outline: none;
+
+  transition: 0.2s;
+}
+
+.score-inputs input:focus {
+  border-color: #ff00aa;
+
+  box-shadow: 0 0 10px rgba(255, 0, 170, 0.4);
+}
+
+.score-separator {
+  font-size: 1.3rem;
+
+  font-weight: bold;
+
+  color: #ffd700;
 }
 
 .match-info {
   margin-top: 15px;
 
-  color: rgba(255,255,255,0.7);
+  padding-top: 12px;
+
+  border-top: 1px solid rgba(255,255,255,0.08);
+
+  color: rgba(255,255,255,0.75);
 
   font-size: 0.9rem;
+}
+
+.match-info p {
+  margin: 4px 0;
 }
 
 
@@ -151,10 +222,9 @@ h2 {
 }
 
 .mini-table {
-  width: 100%;
   border-collapse: collapse;
   margin-top: 10px;
-  min-width: 340px;
+  min-width: 100%;
 }
 
 .mini-table th,

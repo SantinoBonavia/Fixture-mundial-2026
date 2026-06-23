@@ -1,0 +1,73 @@
+export const grupoIMatches = [
+{
+  id: 49,
+  stage: "group",
+  group: "I",
+  matchday: 1,
+  homeTeam: "Francia",
+  awayTeam: "Senegal",
+  date: "2026-06-16",
+  time: "16:00",
+  stadium: "New York / New Jersey Stadium",
+},
+
+{
+  id: 50,
+  stage: "group",
+  group: "I",
+  matchday: 1,
+  homeTeam: "Irak",
+  awayTeam: "Noruega",
+  date: "2026-06-16",
+  time: "19:00",
+  stadium: "Boston Stadium",
+},
+
+{
+  id: 51,
+  stage: "group",
+  group: "I",
+  matchday: 2,
+  homeTeam: "Francia",
+  awayTeam: "Irak",
+  date: "2026-06-22",
+  time: "18:00",
+  stadium: "Philadelphia Stadium",
+},
+
+{
+  id: 52,
+  stage: "group",
+  group: "I",
+  matchday: 2,
+  homeTeam: "Noruega",
+  awayTeam: "Senegal",
+  date: "2026-06-22",
+  time: "21:00",
+  stadium: "New York / New Jersey Stadium",
+},
+
+{
+  id: 53,
+  stage: "group",
+  group: "I",
+  matchday: 3,
+  homeTeam: "Noruega",
+  awayTeam: "Francia",
+  date: "2026-06-26",
+  time: "16:00",
+  stadium: "Boston Stadium",
+},
+
+{
+  id: 54,
+  stage: "group",
+  group: "I",
+  matchday: 3,
+  homeTeam: "Senegal",
+  awayTeam: "Irak",
+  date: "2026-06-26",
+  time: "16:00",
+  stadium: "Toronto Stadium",
+},
+];

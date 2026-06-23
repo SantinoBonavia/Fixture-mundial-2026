@@ -1,0 +1,73 @@
+export const grupoJMatches = [
+{
+  id: 55,
+  stage: "group",
+  group: "J",
+  matchday: 1,
+  homeTeam: "Argentina",
+  awayTeam: "Argelia",
+  date: "2026-06-16",
+  time: "22:00",
+  stadium: "Kansas City Stadium",
+},
+
+{
+  id: 56,
+  stage: "group",
+  group: "J",
+  matchday: 1,
+  homeTeam: "Austria",
+  awayTeam: "Jordania",
+  date: "2026-06-17",
+  time: "01:00",
+  stadium: "San Francisco Bay Area Stadium",
+},
+
+{
+  id: 57,
+  stage: "group",
+  group: "J",
+  matchday: 2,
+  homeTeam: "Argentina",
+  awayTeam: "Austria",
+  date: "2026-06-22",
+  time: "14:00",
+  stadium: "Dallas Stadium",
+},
+
+{
+  id: 58,
+  stage: "group",
+  group: "J",
+  matchday: 2,
+  homeTeam: "Jordania",
+  awayTeam: "Argelia",
+  date: "2026-06-23",
+  time: "00:00",
+  stadium: "San Francisco Bay Area Stadium",
+},
+
+{
+  id: 59,
+  stage: "group",
+  group: "J",
+  matchday: 3,
+  homeTeam: "Jordania",
+  awayTeam: "Argentina",
+  date: "2026-06-27",
+  time: "23:00",
+  stadium: "Dallas Stadium",
+},
+
+{
+  id: 60,
+  stage: "group",
+  group: "J",
+  matchday: 3,
+  homeTeam: "Argelia",
+  awayTeam: "Austria",
+  date: "2026-06-27",
+  time: "23:00",
+  stadium: "Kansas City Stadium",
+},
+];

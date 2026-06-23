@@ -1,3 +1,5 @@
+import { flags } from "../data/flags";
+
 function Bracket({ matches }) {
   return (
     <div>
@@ -6,13 +8,13 @@ function Bracket({ matches }) {
       {matches.map((match) => (
         <div key={match.id} className="bracket-match">
           <p>
-            {match.home}
+            {flags[match.home] || "🏳️"} {match.home}
           </p>
 
           <strong>VS</strong>
 
           <p>
-            {match.away}
+            {flags[match.away] || "🏳️"} {match.away}
           </p>
         </div>
       ))}

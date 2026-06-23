@@ -1,0 +1,73 @@
+export const grupoHMatches = [
+{
+  id: 43,
+  stage: "group",
+  group: "H",
+  matchday: 1,
+  homeTeam: "España",
+  awayTeam: "Cabo Verde",
+  date: "2026-06-15",
+  time: "13:00",
+  stadium: "Atlanta Stadium",
+},
+
+{
+  id: 44,
+  stage: "group",
+  group: "H",
+  matchday: 1,
+  homeTeam: "Arabia Saudita",
+  awayTeam: "Uruguay",
+  date: "2026-06-15",
+  time: "19:00",
+  stadium: "Miami Stadium",
+},
+
+{
+  id: 45,
+  stage: "group",
+  group: "H",
+  matchday: 2,
+  homeTeam: "España",
+  awayTeam: "Arabia Saudita",
+  date: "2026-06-21",
+  time: "13:00",
+  stadium: "Atlanta Stadium",
+},
+
+{
+  id: 46,
+  stage: "group",
+  group: "H",
+  matchday: 2,
+  homeTeam: "Cabo Verde",
+  awayTeam: "Uruguay",
+  date: "2026-06-21",
+  time: "19:00",
+  stadium: "Miami Stadium",
+},
+
+{
+  id: 47,
+  stage: "group",
+  group: "H",
+  matchday: 3,
+  homeTeam: "Uruguay",
+  awayTeam: "España",
+  date: "2026-06-26",
+  time: "21:00",
+  stadium: "Estadio Guadalajara",
+},
+
+{
+  id: 48,
+  stage: "group",
+  group: "H",
+  matchday: 3,
+  homeTeam: "Cabo Verde",
+  awayTeam: "Arabia Saudita",
+  date: "2026-06-26",
+  time: "21:00",
+  stadium: "Houston Stadium",
+},
+];

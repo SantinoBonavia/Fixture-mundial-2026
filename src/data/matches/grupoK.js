@@ -1,0 +1,73 @@
+export const grupoKMatches = [
+{
+  id: 61,
+  stage: "group",
+  group: "K",
+  matchday: 1,
+  homeTeam: "Portugal",
+  awayTeam: "RD Congo",
+  date: "2026-06-17",
+  time: "14:00",
+  stadium: "Houston Stadium",
+},
+
+{
+  id: 62,
+  stage: "group",
+  group: "K",
+  matchday: 1,
+  homeTeam: "Uzbekistán",
+  awayTeam: "Colombia",
+  date: "2026-06-17",
+  time: "23:00",
+  stadium: "Estadio Ciudad de México",
+},
+
+{
+  id: 63,
+  stage: "group",
+  group: "K",
+  matchday: 2,
+  homeTeam: "Portugal",
+  awayTeam: "Uzbekistán",
+  date: "2026-06-23",
+  time: "14:00",
+  stadium: "Houston Stadium",
+},
+
+{
+  id: 64,
+  stage: "group",
+  group: "K",
+  matchday: 2,
+  homeTeam: "RD Congo",
+  awayTeam: "Colombia",
+  date: "2026-06-23",
+  time: "23:00",
+  stadium: "Estadio Guadalajara",
+},
+
+{
+  id: 65,
+  stage: "group",
+  group: "K",
+  matchday: 3,
+  homeTeam: "Colombia",
+  awayTeam: "Portugal",
+  date: "2026-06-27",
+  time: "20:30",
+  stadium: "Miami Stadium",
+},
+
+{
+  id: 66,
+  stage: "group",
+  group: "K",
+  matchday: 3,
+  homeTeam: "RD Congo",
+  awayTeam: "Uzbekistán",
+  date: "2026-06-27",
+  time: "20:30",
+  stadium: "Atlanta Stadium",
+},
+];

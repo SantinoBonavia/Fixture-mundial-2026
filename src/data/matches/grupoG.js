@@ -1,0 +1,73 @@
+export const grupoGMatches = [
+{
+  id: 37,
+  stage: "group",
+  group: "G",
+  matchday: 1,
+  homeTeam: "Bélgica",
+  awayTeam: "Egipto",
+  date: "2026-06-15",
+  time: "16:00",
+  stadium: "Seattle Stadium",
+},
+
+{
+  id: 38,
+  stage: "group",
+  group: "G",
+  matchday: 1,
+  homeTeam: "Irán",
+  awayTeam: "Nueva Zelanda",
+  date: "2026-06-15",
+  time: "22:00",
+  stadium: "Los Angeles Stadium",
+},
+
+{
+  id: 39,
+  stage: "group",
+  group: "G",
+  matchday: 2,
+  homeTeam: "Bélgica",
+  awayTeam: "Irán",
+  date: "2026-06-21",
+  time: "16:00",
+  stadium: "Los Angeles Stadium",
+},
+
+{
+  id: 40,
+  stage: "group",
+  group: "G",
+  matchday: 2,
+  homeTeam: "Egipto",
+  awayTeam: "Nueva Zelanda",
+  date: "2026-06-21",
+  time: "22:00",
+  stadium: "BC Place Vancouver",
+},
+
+{
+  id: 41,
+  stage: "group",
+  group: "G",
+  matchday: 3,
+  homeTeam: "Nueva Zelanda",
+  awayTeam: "Bélgica",
+  date: "2026-06-27",
+  time: "00:00",
+  stadium: "BC Place Vancouver",
+},
+
+{
+  id: 42,
+  stage: "group",
+  group: "G",
+  matchday: 3,
+  homeTeam: "Egipto",
+  awayTeam: "Irán",
+  date: "2026-06-27",
+  time: "00:00",
+  stadium: "Seattle Stadium",
+},
+];

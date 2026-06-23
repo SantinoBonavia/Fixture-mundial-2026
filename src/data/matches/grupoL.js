@@ -1,0 +1,73 @@
+export const grupoLMatches = [
+{
+  id: 67,
+  stage: "group",
+  group: "L",
+  matchday: 1,
+  homeTeam: "Inglaterra",
+  awayTeam: "Croacia",
+  date: "2026-06-17",
+  time: "17:00",
+  stadium: "Dallas Stadium",
+},
+
+{
+  id: 68,
+  stage: "group",
+  group: "L",
+  matchday: 1,
+  homeTeam: "Ghana",
+  awayTeam: "Panamá",
+  date: "2026-06-17",
+  time: "20:00",
+  stadium: "Toronto Stadium",
+},
+
+{
+  id: 69,
+  stage: "group",
+  group: "L",
+  matchday: 2,
+  homeTeam: "Inglaterra",
+  awayTeam: "Ghana",
+  date: "2026-06-23",
+  time: "17:00",
+  stadium: "Boston Stadium",
+},
+
+{
+  id: 70,
+  stage: "group",
+  group: "L",
+  matchday: 2,
+  homeTeam: "Croacia",
+  awayTeam: "Panamá",
+  date: "2026-06-23",
+  time: "20:00",
+  stadium: "Toronto Stadium",
+},
+
+{
+  id: 71,
+  stage: "group",
+  group: "L",
+  matchday: 3,
+  homeTeam: "Panamá",
+  awayTeam: "Inglaterra",
+  date: "2026-06-27",
+  time: "18:00",
+  stadium: "New York / New Jersey Stadium",
+},
+
+{
+  id: 72,
+  stage: "group",
+  group: "L",
+  matchday: 3,
+  homeTeam: "Croacia",
+  awayTeam: "Ghana",
+  date: "2026-06-27",
+  time: "18:00",
+  stadium: "Philadelphia Stadium",
+},
+];

@@ -1,0 +1,73 @@
+export const grupoFMatches = [
+{
+  id: 31,
+  stage: "group",
+  group: "F",
+  matchday: 1,
+  homeTeam: "Países Bajos",
+  awayTeam: "Japón",
+  date: "2026-06-14",
+  time: "17:00",
+  stadium: "Dallas Stadium",
+},
+
+{
+  id: 32,
+  stage: "group",
+  group: "F",
+  matchday: 1,
+  homeTeam: "Suecia",
+  awayTeam: "Túnez",
+  date: "2026-06-14",
+  time: "23:00",
+  stadium: "Estadio Monterrey",
+},
+
+{
+  id: 33,
+  stage: "group",
+  group: "F",
+  matchday: 2,
+  homeTeam: "Países Bajos",
+  awayTeam: "Suecia",
+  date: "2026-06-20",
+  time: "14:00",
+  stadium: "Houston Stadium",
+},
+
+{
+  id: 34,
+  stage: "group",
+  group: "F",
+  matchday: 2,
+  homeTeam: "Japón",
+  awayTeam: "Túnez",
+  date: "2026-06-21",
+  time: "01:00",
+  stadium: "Estadio Monterrey",
+},
+
+{
+  id: 35,
+  stage: "group",
+  group: "F",
+  matchday: 3,
+  homeTeam: "Túnez",
+  awayTeam: "Países Bajos",
+  date: "2026-06-25",
+  time: "20:00",
+  stadium: "Dallas Stadium",
+},
+
+{
+  id: 36,
+  stage: "group",
+  group: "F",
+  matchday: 3,
+  homeTeam: "Japón",
+  awayTeam: "Suecia",
+  date: "2026-06-25",
+  time: "20:00",
+  stadium: "Kansas City Stadium",
+},
+];

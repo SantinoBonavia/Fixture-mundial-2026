@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { flags } from "../data/flags";
 import {
   saveMatchResult,
   getMatchResult,
@@ -31,36 +32,42 @@ function MatchCard({
 
   return (
     <div className="match-card">
-      <div className="match-teams">
-        <span>{homeTeam}</span>
-
-        <div className="score-inputs">
-          <input
-            type="number"
-            min="0"
-            value={homeScore}
-            onChange={(e) => setHomeScore(e.target.value)}
-          />
-
-          <span>-</span>
-
-          <input
-            type="number"
-            min="0"
-            value={awayScore}
-            onChange={(e) => setAwayScore(e.target.value)}
-          />
-        </div>
-
-        <span>{awayTeam}</span>
+    <div className="match-header">
+      <div className="team">
+        <span className="team-name">{homeTeam}</span>
+        <span className="team-flag">{flags[homeTeam]}</span>
       </div>
 
-      <div className="match-info">
-        <p>{date}</p>
-        <p>{time}</p>
-        <p>{stadium}</p>
+      <div className="score-inputs">
+        <input
+          type="number"
+          min="0"
+          value={homeScore}
+          onChange={(e) => setHomeScore(e.target.value)}
+        />
+
+        <span className="score-separator">-</span>
+
+        <input
+          type="number"
+          min="0"
+          value={awayScore}
+          onChange={(e) => setAwayScore(e.target.value)}
+        />
+      </div>
+
+      <div className="team">
+        <span className="team-name">{awayTeam}</span>
+        <span className="team-flag">{flags[awayTeam]}</span>
       </div>
     </div>
+
+    <div className="match-info">
+      <p>📅 {date}</p>
+      <p>🕒 {time}</p>
+      <p>🏟️ {stadium}</p>
+    </div>
+  </div>
   );
 }
 

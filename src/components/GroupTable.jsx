@@ -1,3 +1,5 @@
+import { flags } from "../data/flags";
+
 function GroupTable({ standings }) {
   return (
     <table className="group-table">
@@ -13,7 +15,9 @@ function GroupTable({ standings }) {
       <tbody>
         {standings.map((team) => (
           <tr key={team.team}>
-            <td>{team.team}</td>
+            <td>
+              {flags[team.team]} {team.team}
+            </td>
             <td>{team.pts}</td>
             <td>{team.pj}</td>
             <td>{team.dg}</td>
