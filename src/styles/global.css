@@ -272,3 +272,42 @@ h2 {
 .bracket-match strong {
   color: #ff00b8;
 }
+
+.bracket-container {
+  margin-top: 25px;
+}
+
+.match-number {
+  font-size: 0.8rem;
+  color: #00e5ff;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.bracket-team {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.vs-text {
+  margin: 10px 0;
+  text-align: center;
+  color: #ff00b8;
+  font-weight: bold;
+}
+
+.bracket-match {
+  margin-top: 12px;
+  padding: 12px;
+
+  border: 1px solid #ff00b8;
+  border-radius: 12px;
+
+  background: rgba(255, 0, 184, 0.08);
+
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
