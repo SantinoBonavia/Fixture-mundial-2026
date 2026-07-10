@@ -16,5 +16,16 @@ export function getWinner(matchId, homeTeam, awayTeam) {
     return awayTeam;
   }
 
+  const homePenalties = Number(result.homePenalties);
+  const awayPenalties = Number(result.awayPenalties);
+
+  if (homePenalties > awayPenalties) {
+    return homeTeam;
+  }
+
+  if (awayPenalties > homePenalties) {
+    return awayTeam;
+  }
+
   return null;
 }

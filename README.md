@@ -1,37 +1,150 @@
-# 🏆 Fixture Mundial 2026
+# 🌍 FIFA World Cup 2026 Fixture Simulator
 
-Aplicación web desarrollada con React que permite seguir el Mundial 2026 de manera interactiva.
+Aplicación web desarrollada con **React + Vite** que permite simular completamente la Copa Mundial de la FIFA 2026.
 
-Los usuarios pueden cargar los resultados de cada partido y el sistema actualiza automáticamente las tablas de posiciones, los clasificados y las fases eliminatorias.
+El usuario puede ingresar todos los resultados de la fase de grupos y de la fase eliminatoria, mientras que la aplicación calcula automáticamente las posiciones, los clasificados, los mejores terceros y el avance de cada selección hasta conocer al campeón del torneo.
 
-## ✨ Funcionalidades
+---
 
-* ⚽ Carga de resultados de partidos
-* 📊 Tablas de posiciones automáticas
-* 🏅 Clasificados automáticos por grupo
-* 🏟️ Generación de cruces eliminatorios
-* 💾 Persistencia de datos con LocalStorage
-* 🎨 Interfaz inspirada en la identidad visual del Mundial 2026
+# ✨ Funcionalidades
 
-## 🚀 Tecnologías utilizadas
+## Fase de grupos
 
-* React
-* JavaScript
-* Vite
-* CSS
-* LocalStorage
+- ✅ Carga de resultados partido por partido.
+- ✅ Actualización automática de las tablas.
+- ✅ Diferencia de gol.
+- ✅ Goles a favor y en contra.
+- ✅ Puntos.
+- ✅ Clasificación automática.
 
-## 📌 Estado del proyecto
+---
 
-En desarrollo.
+## Clasificación
 
-Próximas funcionalidades:
+- ✅ Primeros y segundos de cada grupo.
+- ✅ Selección automática de los mejores terceros.
 
-* Completar fixture de grupos
-* Implementar cuadro completo de eliminación
-* Octavos, cuartos, semifinales y final automáticos
-* Mejoras visuales y responsive design
+---
 
-## 👨‍💻 Autor
+## Fase eliminatoria
 
-Santino Bonavia
+- ✅ 16avos de final.
+- ✅ Octavos de final.
+- ✅ Cuartos de final.
+- ✅ Semifinales.
+- ✅ Partido por el tercer puesto.
+- ✅ Final.
+
+---
+
+## Eliminación directa
+
+- ✅ Avance automático del ganador.
+- ✅ Definición por penales cuando hay empate.
+- ✅ Validación para impedir empates en penales.
+
+---
+
+## Podio
+
+Al finalizar el torneo se muestran automáticamente:
+
+- 🏆 Campeón
+- 🥈 Subcampeón
+- 🥉 Tercer puesto
+
+---
+
+## Persistencia de datos
+
+Los resultados quedan almacenados utilizando **LocalStorage**, por lo que al recargar la página el torneo continúa exactamente donde quedó.
+
+---
+
+# 🛠 Tecnologías utilizadas
+
+- React
+- Vite
+- JavaScript
+- HTML5
+- CSS
+- LocalStorage
+
+---
+
+# 📂 Estructura del proyecto
+
+```
+src/
+│
+├── components/
+│   ├── MatchCard
+│   ├── KnockoutMatchCard
+│   ├── GroupSection
+│   ├── Bracket
+│   └── Podio
+│
+├── data/
+│   ├── groups
+│   ├── matches
+│   └── flags
+│
+├── utils/
+│   ├── standings
+│   ├── bracket
+│   ├── bracketHelpers
+│   ├── resolveTeam
+│   ├── getWinner
+│   ├── mejorTercero
+│   └── localStorage
+│
+└── pages/
+    └── Home
+```
+
+---
+
+# 🚀 Instalación
+
+Clonar el repositorio
+
+```bash
+git clone https://github.com/TU-USUARIO/world-cup-fixture.git
+```
+
+Ingresar a la carpeta
+
+```bash
+cd world-cup-fixture
+```
+
+Instalar dependencias
+
+```bash
+npm install
+```
+
+Ejecutar el proyecto
+
+```bash
+npm run dev
+```
+
+---
+
+# 💡 Posibles mejoras futuras
+
+- Estadísticas de los equipos.
+- Simulación automática de partidos.
+- Consumo de API oficial.
+- Modo oscuro/claro.
+- Exportar resultados.
+- Compartir el torneo.
+
+---
+
+# 👨‍💻 Autor
+
+**Santino Bonavia**
+
+Proyecto desarrollado como hobby. 

@@ -1,6 +1,5 @@
-import { flags } from "../data/flags";
-import KnockoutMatch from "./KnockoutMatch";
 import { resolveTeam } from "../utils/resolveTeam";
+import KnockoutMatchCard from "./KnockoutMatchCard";
 import {
   roundOf16,
   quarterFinals,
@@ -8,29 +7,22 @@ import {
   finalRounds,
 } from "../utils/nextRounds";
 
-function renderMatch(match, allMatches) {
-  const home = resolveTeam(
-    match.home,
-    allMatches
-  );
-
-  const away = resolveTeam(
-    match.away,
-    allMatches
-  );
+function renderMatch(match, allMatches, onUpdate) {
+  const home = resolveTeam(match.home, allMatches);
+  const away = resolveTeam(match.away, allMatches);
 
   return (
-    <KnockoutMatch
+    <KnockoutMatchCard
       key={match.id}
-      id={match.id}
-      homeTeam={home}
-      awayTeam={away}
+      match={match}
+      home={home}
+      away={away}
+      onUpdate={onUpdate}
     />
   );
 }
 
-function Bracket({ matches }) {
-
+function Bracket({ matches, onUpdate }) {
   const allMatches = [
     ...matches,
     ...roundOf16,
@@ -40,26 +32,52 @@ function Bracket({ matches }) {
   ];
 
   return (
-    <div className="bracket-container">
+    <div className="bracket">
+      <div className="round">
+        <h2>16avos</h2>
 
-      <h2>16avos de Final</h2>
-      {matches.map((match) => renderMatch(match, allMatches))}
+        {matches.map((match) =>
+          renderMatch(match, allMatches, onUpdate)
+        )}
+      </div>
 
-      <h2>Octavos de Final</h2>
-      {roundOf16.map((match) => renderMatch(match, allMatches))}
+      <div className="round">
+        <h2>Octavos</h2>
 
-      <h2>Cuartos de Final</h2>
-      {quarterFinals.map((match) => renderMatch(match, allMatches))}
+        {roundOf16.map((match) =>
+          renderMatch(match, allMatches, onUpdate)
+        )}
+      </div>
 
-      <h2>Semifinales</h2>
-      {semiFinals.map((match) => renderMatch(match, allMatches))}
+      <div className="round">
+        <h2>Cuartos</h2>
 
-      <h2>Tercer Puesto</h2>
-      {renderMatch(finalRounds[0], allMatches)}
+        {quarterFinals.map((match) =>
+          renderMatch(match, allMatches, onUpdate)
+        )}
+      </div>
 
-      <h2>Final</h2>
-      {renderMatch(finalRounds[1], allMatches)}
+      <div className="round">
+        <h2>Semifinales</h2>
 
+        {semiFinals.map((match) =>
+          renderMatch(match, allMatches, onUpdate)
+        )}
+      </div>
+
+      <div className="round">
+        <h2>Final</h2>
+
+        {renderMatch(finalRounds[1], allMatches, onUpdate)}
+
+        <div className="third-place">
+
+            <h2>Tercer Puesto</h2>
+
+            {renderMatch(finalRounds[0], allMatches, onUpdate)}
+
+        </div>
+      </div>
     </div>
   );
 }

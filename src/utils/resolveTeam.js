@@ -15,11 +15,21 @@ export function resolveTeam(teamName, bracketMatches) {
     return teamName;
   }
 
-  const winner = getWinner(
-    match.id,
-    match.home,
-    match.away
-  );
+  const home =
+  match.home.startsWith("Ganador")
+    ? resolveTeam(match.home, bracketMatches)
+    : match.home;
 
-  return winner || teamName;
+const away =
+  match.away.startsWith("Ganador")
+    ? resolveTeam(match.away, bracketMatches)
+    : match.away;
+
+const winner = getWinner(
+  match.id,
+  home,
+  away
+);
+
+return winner || teamName;
 }

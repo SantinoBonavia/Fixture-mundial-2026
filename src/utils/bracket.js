@@ -1,4 +1,14 @@
-export function generateBracket(qualifiedTeams) {
+export function generateBracket(qualifiedTeams, bestThirds) {
+
+  const third1 = bestThirds[0]?.team || "Mejor 3°";
+  const third2 = bestThirds[1]?.team || "Mejor 3°";
+  const third3 = bestThirds[2]?.team || "Mejor 3°";
+  const third4 = bestThirds[3]?.team || "Mejor 3°";
+  const third5 = bestThirds[4]?.team || "Mejor 3°";
+  const third6 = bestThirds[5]?.team || "Mejor 3°";
+  const third7 = bestThirds[6]?.team || "Mejor 3°";
+  const third8 = bestThirds[7]?.team || "Mejor 3°";
+
   return [
     {
       id: 73,
@@ -9,7 +19,7 @@ export function generateBracket(qualifiedTeams) {
     {
       id: 74,
       home: qualifiedTeams.E?.first?.team || "1° Grupo E",
-      away: "Mejor 3° (A/B/C/D/F)",
+      away: third7,
     },
 
     {
@@ -27,7 +37,7 @@ export function generateBracket(qualifiedTeams) {
     {
       id: 77,
       home: qualifiedTeams.I?.first?.team || "1° Grupo I",
-      away: "Mejor 3° (C/D/F/G/H)",
+      away: third2,
     },
 
     {
@@ -39,25 +49,25 @@ export function generateBracket(qualifiedTeams) {
     {
       id: 79,
       home: qualifiedTeams.A?.first?.team || "1° Grupo A",
-      away: "Mejor 3° (C/E/F/H/I)",
+      away: third3,
     },
 
     {
       id: 80,
       home: qualifiedTeams.L?.first?.team || "1° Grupo L",
-      away: "Mejor 3° (E/H/I/J/K)",
+      away: third1, 
     },
 
     {
       id: 81,
       home: qualifiedTeams.D?.first?.team || "1° Grupo D",
-      away: "Mejor 3° (B/E/F/I/J)",
+      away: third5, 
     },
 
     {
       id: 82,
       home: qualifiedTeams.G?.first?.team || "1° Grupo G",
-      away: "Mejor 3° (A/E/H/I/J)",
+      away: third8,
     },
 
     {
@@ -75,7 +85,7 @@ export function generateBracket(qualifiedTeams) {
     {
       id: 85,
       home: qualifiedTeams.B?.first?.team || "1° Grupo B",
-      away: "Mejor 3° (E/F/G/I/J)",
+      away: third6,
     },
 
     {
@@ -87,7 +97,7 @@ export function generateBracket(qualifiedTeams) {
     {
       id: 87,
       home: qualifiedTeams.K?.first?.team || "1° Grupo K",
-      away: "Mejor 3° (D/E/I/J/L)",
+      away: third4,
     },
 
     {

@@ -6,14 +6,30 @@ import { getAllResults } from "../utils/localStorage";
 import { calculateStandings } from "../utils/standings";
 import Bracket from "../components/Bracket";
 import { generateBracket } from "../utils/bracket";
+import { resolveTeam } from "../utils/resolveTeam";
+import { getAllKnockoutMatches, getPodium } from "../utils/bracketHelpers";
 import { flags } from "../data/flags";
+import { useState } from "react";
+import Podium from "../components/Podio";
+import { getBestThirds } from "../utils/mejorTercero";
+import { getWinner } from "../utils/getWinner";
+import {
+  roundOf16,
+  quarterFinals,
+  semiFinals,
+  finalRounds,
+} from "../utils/nextRounds";
 
 function Home() {
-  const results = getAllResults();
 
+  const [refresh, setRefresh] = useState(0);
+
+  const results = getAllResults(refresh);
+  
   const allStandings = {};
   const qualifiedTeams = {};
   const matchesByMatchday = {};
+  
 
   // Agrupar partidos por fecha
   matches.forEach((match) => {
@@ -50,8 +66,13 @@ function Home() {
     }
   });
 
+  const bestThirds = getBestThirds(allStandings);
+
   // Generar cruces
-  const bracketMatches = generateBracket(qualifiedTeams);
+  const bracketMatches = generateBracket(qualifiedTeams, bestThirds);
+
+  const allKnockoutMatches = getAllKnockoutMatches(bracketMatches);
+  const { champion, runnerUp, thirdPlace } = getPodium(allKnockoutMatches);
 
   return (
     <div className="app-layout">
@@ -77,25 +98,38 @@ function Home() {
         <section className="center-panel">
           <h2>Fixture Mundial</h2>
 
-          {Object.entries(matchesByMatchday).map(
-            ([matchday, dayMatches]) => (
-              <div key={matchday} className="matchday-block">
-                <h2>Fecha {matchday}</h2>
+          <div className="matchdays-grid">
 
-                {dayMatches.map((match) => (
-                  <MatchCard
-                    key={match.id}
-                    id={match.id}
-                    homeTeam={match.homeTeam}
-                    awayTeam={match.awayTeam}
-                    date={match.date}
-                    time={match.time}
-                    stadium={match.stadium}
-                  />
-                ))}
-              </div>
-            )
-          )}
+            {Object.entries(matchesByMatchday).map(
+              ([matchday, dayMatches]) => (
+
+                <div
+                  key={matchday}
+                  className="matchday-column"
+                >
+
+                  <h2>Fecha {matchday}</h2>
+
+                  {dayMatches.map((match) => (
+
+                    <MatchCard
+                      key={match.id}
+                      id={match.id}
+                      homeTeam={match.homeTeam}
+                      awayTeam={match.awayTeam}
+                      date={match.date}
+                      time={match.time}
+                      stadium={match.stadium}
+                    />
+
+                  ))}
+
+                </div>
+
+              )
+            )}
+
+          </div>
         </section>
 
         <aside className="right-panel">
@@ -115,11 +149,45 @@ function Home() {
             </div>
           ))}
 
-          {Object.keys(qualifiedTeams).length > 0 && (
-            <Bracket matches={bracketMatches} />
-          )}
+          <h2>Mejores terceros</h2>
+
+          {bestThirds.map((team) => (
+            <div
+              key={team.group}
+              className="qualified-card"
+            >
+              <p>
+                Grupo {team.group} - {team.team}
+              </p>
+
+              <small>
+                {team.pts} pts
+              </small>
+            </div>
+          ))}
+
         </aside>
       </main>
+
+      {Object.keys(qualifiedTeams).length > 0 && (
+
+      <section className="knockout-section">
+
+          <Bracket
+              matches={bracketMatches}
+              onUpdate={() => setRefresh(r => r + 1)}
+          />
+
+          <Podium
+              champion={champion}
+              runnerUp={runnerUp}
+              thirdPlace={thirdPlace}
+          />
+
+      </section>
+
+      )}
+
     </div>
   );
 }
