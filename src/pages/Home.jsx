@@ -6,25 +6,17 @@ import { getAllResults } from "../utils/localStorage";
 import { calculateStandings } from "../utils/standings";
 import Bracket from "../components/Bracket";
 import { generateBracket } from "../utils/bracket";
-import { resolveTeam } from "../utils/resolveTeam";
 import { getAllKnockoutMatches, getPodium } from "../utils/bracketHelpers";
 import { flags } from "../data/flags";
 import { useState } from "react";
 import Podium from "../components/Podio";
 import { getBestThirds } from "../utils/mejorTercero";
-import { getWinner } from "../utils/getWinner";
-import {
-  roundOf16,
-  quarterFinals,
-  semiFinals,
-  finalRounds,
-} from "../utils/nextRounds";
 
 function Home() {
 
-  const [refresh, setRefresh] = useState(0);
+  const [, setRefresh] = useState(0);
 
-  const results = getAllResults(refresh);
+  const results = getAllResults();
   
   const allStandings = {};
   const qualifiedTeams = {};

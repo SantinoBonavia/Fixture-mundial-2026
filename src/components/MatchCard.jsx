@@ -13,16 +13,10 @@ function MatchCard({
   time,
   stadium,
 }) {
-  const [homeScore, setHomeScore] = useState("");
-  const [awayScore, setAwayScore] = useState("");
-  useEffect(() => {
-    const savedResult = getMatchResult(id);
+  const savedResult = getMatchResult(id);
 
-    if (savedResult) {
-      setHomeScore(savedResult.homeScore);
-      setAwayScore(savedResult.awayScore);
-    }
-  }, [id]);
+  const [homeScore, setHomeScore] = useState(savedResult?.homeScore ?? "");
+  const [awayScore, setAwayScore] = useState(savedResult?.awayScore ?? "");
 
   useEffect(() => {
     if (homeScore !== "" && awayScore !== "") {
@@ -35,7 +29,7 @@ function MatchCard({
     <div className="match-header">
       <div className="team">
         <span className="team-name">{homeTeam}</span>
-        <span className="team-flag">{flags[homeTeam]}</span>
+        <span className="team-flag">{flags[homeTeam] || "🏳️"}</span>
       </div>
 
       <div className="score-inputs">
@@ -58,7 +52,7 @@ function MatchCard({
 
       <div className="team">
         <span className="team-name">{awayTeam}</span>
-        <span className="team-flag">{flags[awayTeam]}</span>
+        <span className="team-flag">{flags[awayTeam] || "🏳️"}</span>
       </div>
     </div>
 

@@ -12,21 +12,12 @@ function KnockoutMatchCard({
   onUpdate,
 }) {
 
-  const [homeScore, setHomeScore] = useState("");
-  const [awayScore, setAwayScore] = useState("");
-  const [homePenalties, setHomePenalties] = useState("");
-  const [awayPenalties, setAwayPenalties] = useState("");
-
-  useEffect(() => {
   const savedResult = getMatchResult(match.id);
 
-  if (savedResult) {
-    setHomeScore(savedResult.homeScore);
-    setAwayScore(savedResult.awayScore);
-    setHomePenalties(savedResult.homePenalties || "");
-    setAwayPenalties(savedResult.awayPenalties || "");
-  }
-}, [match.id]);
+  const [homeScore, setHomeScore] = useState(savedResult?.homeScore ?? "");
+  const [awayScore, setAwayScore] = useState(savedResult?.awayScore ?? "");
+  const [homePenalties, setHomePenalties] = useState(savedResult?.homePenalties ?? "");
+  const [awayPenalties, setAwayPenalties] = useState(savedResult?.awayPenalties ?? "");
 
 useEffect(() => {
   if (homeScore === "" || awayScore === "") {

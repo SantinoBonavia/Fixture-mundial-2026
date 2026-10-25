@@ -15,10 +15,10 @@ function GroupSection({ title, teams, standings }) {
           </thead>
 
           <tbody>
-            {standings.map((team) => (
+            {standings.map((team, index) => (
               <tr
                 key={team.team}
-                className={standings.indexOf(team) < 2 ? "qualified" : ""}
+                className={index < 2 && team.pj > 0 ? "qualified" : ""}
               >
                 <td>{team.team}</td>
                 <td>{team.pts}</td>

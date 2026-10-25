@@ -1,11 +1,14 @@
 import { getWinner } from "./getWinner";
 
 export function resolveTeam(teamName, bracketMatches) {
-  if (!teamName.startsWith("Ganador")) {
+  const isWinner = teamName.startsWith("Ganador");
+  const isLoser = teamName.startsWith("Perdedor");
+
+  if (!isWinner && !isLoser) {
     return teamName;
   }
 
-  const matchId = Number(teamName.replace("Ganador ", ""));
+  const matchId = Number(teamName.split(" ")[1]);
 
   const match = bracketMatches.find(
     (m) => m.id === matchId
@@ -15,21 +18,22 @@ export function resolveTeam(teamName, bracketMatches) {
     return teamName;
   }
 
-  const home =
-  match.home.startsWith("Ganador")
-    ? resolveTeam(match.home, bracketMatches)
-    : match.home;
+  const home = resolveTeam(match.home, bracketMatches);
+  const away = resolveTeam(match.away, bracketMatches);
 
-const away =
-  match.away.startsWith("Ganador")
-    ? resolveTeam(match.away, bracketMatches)
-    : match.away;
+  const winner = getWinner(
+    match.id,
+    home,
+    away
+  );
 
-const winner = getWinner(
-  match.id,
-  home,
-  away
-);
+  if (!winner) {
+    return teamName;
+  }
 
-return winner || teamName;
+  if (isWinner) {
+    return winner;
+  }
+
+  return winner === home ? away : home;
 }

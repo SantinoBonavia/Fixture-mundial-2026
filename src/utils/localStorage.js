@@ -1,6 +1,5 @@
 export const saveMatchResult = (matchId, result) => {
-  const savedResults =
-    JSON.parse(localStorage.getItem("worldcup-results")) || {};
+  const savedResults = getAllResults();
 
   savedResults[matchId] = result;
 
@@ -11,10 +10,7 @@ export const saveMatchResult = (matchId, result) => {
 };
 
 export const getMatchResult = (matchId) => {
-  const savedResults =
-    JSON.parse(localStorage.getItem("worldcup-results")) || {};
-
-  return savedResults[matchId];
+  return getAllResults()[matchId];
 };
 
 export const getAllResults = () => {

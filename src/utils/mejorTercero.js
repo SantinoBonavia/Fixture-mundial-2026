@@ -3,7 +3,7 @@ export function getBestThirds(allStandings) {
 
   Object.entries(allStandings).forEach(
     ([group, table]) => {
-      if (table.length >= 3) {
+      if (table.length >= 3 && table[2].pj > 0) {
         thirdPlaces.push({
           group,
           ...table[2],

@@ -1,5 +1,6 @@
 import { resolveTeam } from "../utils/resolveTeam";
 import KnockoutMatchCard from "./KnockoutMatchCard";
+import { getAllKnockoutMatches } from "../utils/bracketHelpers";
 import {
   roundOf16,
   quarterFinals,
@@ -23,13 +24,7 @@ function renderMatch(match, allMatches, onUpdate) {
 }
 
 function Bracket({ matches, onUpdate }) {
-  const allMatches = [
-    ...matches,
-    ...roundOf16,
-    ...quarterFinals,
-    ...semiFinals,
-    ...finalRounds,
-  ];
+  const allMatches = getAllKnockoutMatches(matches);
 
   return (
     <div className="bracket">
